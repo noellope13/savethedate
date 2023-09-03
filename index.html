@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Noel & Rachel's Wedding</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"> 
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">
+        Save The Date <br>
+        <span class="heading-subtext">Rachel Widder & Noel Lopez</span>
+      </h1>
+    </header>
+    <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">Details</a> 
+
+    <style>
+      body {
+        background-image: url('img/sand.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: cover;
+      }
+      </style>
+  
+   
+    <section class="section" id="rsvp">
+      
+    <div style="background-color: #c8dee3; width: auto; height: auto; padding: 20px; border-radius: 5px;">
+      <div class=" position-relative text-center">
+          <h2 class="sub-heading">Mrs. & Mr. Lopez in...</h2>
+          <p id="demo" ></p>
+        </div>
+        
+
+    
+      <h2 class="sub-heading">The Details</h2>
+      <div class="details">
+        <i class="fas fa-calendar-check"></i>
+        <h3 class="details-heading">When</h3>
+        <p>Saturday, April 6, 2024</p>
+        <a href="./img/april_6_2024_event.ics" rel="noopener" target="_blank" rel="nofollow">Add to Calendar</a>
+      </div>
+      <div class="details">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3 class="details-heading">Location</h3>
+        <h3 class="details-heading">Stahlman Park Event Center</h3>
+        
+          <a href="https://maps.apple.com/?address=2211%20Blue%20Water%20Hwy,%20Brazoria,%20TX%20%2077541,%20United%20States&auid=3172478471772238485&ll=28.971619,-95.261750&lsp=9902&q=STAHLMAN%20PARK%20EVENT%20CENTER&_ext=CjIKBQgEEOIBCgQIBRADCgQIBhASCgQIChAACgQIUhAHCgQIVRAQCgQIWRACCgUIpAEQARImKWM4Q/i59zxAMQlgmm0b0VfAOV/jjrAG+jxAQekz0DFz0FfAUAQ%3D" 
+             href="https://goo.gl/maps/YgPjMHa9FQXEUGvD7" 
+             target="_blank" rel="noopener">2211 Bluewater Highway, Surfside Beach, Texas.  </a>
+    <br>  <br>
+          
+
+        <img class="resort-image" src="./img/resort.jpeg" alt="Resort" />
+      </div>
+      
+      <div class="details">
+        <i class="fas fa-reply"></i>
+        <h3 class="details-heading" >Formal invitations to follow</h3>
+        <p>For more details visit our website</p>
+      
+        
+    
+
+       <input id='password' type='text'  />
+<a href="www.noelandrachelswedding.com" onclick="javascript:return validatePass()"><br>Enter your password and click here</a>
+<script>
+function validatePass(){
+    if(document.getElementById('password').value == 'FutureLopez'){
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+<p>PS. Your password is in your formal invation</p>
+        <!-- Include Embedded link of Google Form here in place of # -->
+        <!-- <iframe title="RSVP" src="" style="width:100%;" height="960" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+      </div>
+    </section>
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var rsvpButton = document.getElementById('rsvpButton')
+      rsvpButton.addEventListener('click',hideButton,false);
+
+      function hideButton() {
+        rsvpButton.style.display = 'none';
+      }   
+    </script>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("April 6, 2024 16:00:00").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = "<strong>" + days + "  Days&nbsp;        " + hours + "  Hours&nbsp;        "
++ minutes + " Minutes&nbsp;      " + seconds + " Seconds" + "<strong>" ;
+      
+    // If the count down is ove&nbsp;r, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "MARRIED";
+    }
+  }, 1000);
+  </script>
+
+  </body>
+</html>
