@@ -20,11 +20,13 @@
     <div style="background-color: #e0eff2; width: auto; height: auto; padding: 20px; border-radius: 5px;">
       <div class=" position-relative text-center">
       <h1 class="heading">
-        <span class="heading-subtext">Mrs & Mr Lopez in...</span>
+        <span class="heading-subtext">Mr & Mrs Lopez in...</span>
       </h1>
           <p id="demo" ></p>
         </div>
         
+
+    
 
      <section class="section" id="rsvp">
       <h2 class="sub-heading">The Details</h2>
@@ -48,31 +50,107 @@
         <img class="resort-image" src="./img/resort.jpeg" alt="Resort" />
       </div>
       
-      <div class="details">
-        <i class="fas fa-reply"></i>
-        <h3 class="details-heading" >Formal invitations to follow</h3>
-        <p>For more details visit our website</p>
-      
-        
     
 
-       <input id='password' type='text'  />
+
+    <style>
+   
+
+      #slideshow-container {
+          position: relative;
+          width: 600px;
+          max-width: 90%;
+          height: 700px;
+          overflow: hidden;
+          margin:auto;
+           
+            
+            
+            
+            
+      }
+
+      #slideshow {
+          display: flex;
+          transition: transform 2s ease-in-out;
+      }
+
+      #slideshow img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  </style>
+    <h2 class="sub-heading">Engagement Photos</h2>
+    <div id="slideshow-container">
+      <div id="slideshow">
+          <img src="img/nr1.jpg" alt="Image 1">
+          <img src="img/nr2.jpg" alt="Image 2">
+          <img src="img/nr3.jpg" alt="Image 3">
+          <img src="img/nr4.jpg" alt="Image 4">
+          <img src="img/nr5.jpg" alt="Image 5">
+          <img src="img/nr6.jpg" alt="Image 6">
+          <img src="img/nr7.jpg" alt="Image 7">
+          <img src="img/nr8.jpg" alt="Image 8">
+          <img src="img/nr9.jpg" alt="Image 9">
+          <img src="img/nr10.jpg" alt="Image 10">
+          <img src="img/n11.jpg" alt="Image 9">
+          <img src="img/nr12.jpg" alt="Image 10">
+          
+          
+          
+          <!-- Add more images as needed -->
+      </div>
+  </div>
+
+
+  <div class="details">
+    <i class="fas fa-reply"></i>
+    <h3 class="details-heading" >Formal invitations to follow</h3>
+    <p>For more details visit our website</p>
+  
+    
+
+
+   <input id='password' type='text'  />
 <a href="www.noelandrachelswedding.com" onclick="javascript:return validatePass()"><br>Enter your password and click here</a>
 <script>
 function validatePass(){
-    if(document.getElementById('password').value == 'FutureLopez'){
-        return true;
-    }else{
-        alert('wrong password!!');
-        return false;
-    }
+if(document.getElementById('password').value == 'FutureLopez'){
+    return true;
+}else{
+    alert('wrong password!!');
+    return false;
+}
 }
 </script>
 <p>PS. Your password will be in your formal invation</p>
-        <!-- Include Embedded link of Google Form here in place of # -->
-        <!-- <iframe title="RSVP" src="" style="width:100%;" height="960" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
-      </div>
-    </section>
+
+
+
+
+    <!-- Include Embedded link of Google Form here in place of # -->
+    <!-- <iframe title="RSVP" src="" style="width:100%;" height="960" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+  </div>
+
+</section>
+
+  <script>
+      const slideshow = document.getElementById('slideshow');
+      const images = document.querySelectorAll('#slideshow img');
+      let currentImageIndex = 0;
+
+      function slideLeft() {
+          currentImageIndex = (currentImageIndex + 1) % images.length;
+          const displacement = -currentImageIndex * 100;
+          slideshow.style.transform = `translateX(${displacement}%)`;
+      }
+
+      // Start the slideshow
+      setInterval(slideLeft, 5000); // Slide left every 3 seconds
+  </script>
+
+
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
     <script defer>
       var scroll = new SmoothScroll('a[href*="#"]');
@@ -113,6 +191,7 @@ function validatePass(){
     }
   }, 1000);
   </script>
+
 
   </body>
 </html>
